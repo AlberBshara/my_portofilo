@@ -1,0 +1,779 @@
+/* About.css - Fixed Button Version */
+
+/* Modern Education Section Styles */
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  overflow-x: hidden;
+}
+
+.education-hero {
+  padding: 100px 0 50px 0;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #8A2BE2 0%, #4A00E0 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hero-title {
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #8A2BE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.3em;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* University Section */
+.university-section {
+  margin: 80px 0;
+}
+
+.university-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 25px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  border-top: 4px solid #8A2BE2;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.university-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(138, 43, 226, 0.2);
+  border-color: rgba(138, 43, 226, 0.4);
+}
+
+.university-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.university-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  object-fit: contain;
+  border: 3px solid rgba(138, 43, 226, 0.3);
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.university-logo:hover {
+  transform: scale(1.05);
+  border-color: rgba(138, 43, 226, 0.6);
+}
+
+.university-info {
+  flex: 1;
+}
+
+.university-name {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ffffff 0%, #8A2BE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.university-degree {
+  color: #8A2BE2;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.university-period {
+  background: rgba(138, 43, 226, 0.2);
+  color: #8A2BE2;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.university-details {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.8;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.university-details p {
+  margin-bottom: 15px;
+}
+
+/* Curriculum Highlights */
+.curriculum-section {
+  margin: 40px 0;
+}
+
+.curriculum-title {
+  color: #8A2BE2;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.curriculum-item {
+  background: rgba(138, 43, 226, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.curriculum-item:hover {
+  transform: translateY(-5px);
+  background: rgba(138, 43, 226, 0.15);
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.1);
+}
+
+.curriculum-item h4 {
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.curriculum-icon {
+  font-size: 1.3em;
+}
+
+.curriculum-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.curriculum-item li {
+  color: rgba(255,255,255,0.8);
+  padding: 5px 0;
+  position: relative;
+  padding-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.curriculum-item:hover li {
+  color: rgba(255,255,255,0.9);
+}
+
+.curriculum-item li::before {
+  content: '▸';
+  color: #8A2BE2;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Certifications Showcase */
+.certifications-showcase {
+  margin: 80px 0;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.certification-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #8A2BE2;
+  animation: fadeInUp 0.8s ease-out;
+  cursor: default;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 25px 50px rgba(138, 43, 226, 0.2);
+}
+
+.certification-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #8A2BE2;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.certification-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover .certification-image {
+  transform: scale(1.1);
+  border-color: rgba(138, 43, 226, 0.6);
+}
+
+.certification-title {
+  color: white;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.certification-issuer {
+  color: #8A2BE2;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.certification-date {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.certification-description {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.certification-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* FIXED BUTTON STYLES */
+.cert-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 140px;
+  font-family: inherit;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-btn:active {
+  transform: translateY(0) !important;
+}
+
+.cert-btn-primary {
+  background: linear-gradient(135deg, #8A2BE2 0%, #4A00E0 100%);
+  color: white !important;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.cert-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+  color: white !important;
+  text-decoration: none;
+}
+
+.cert-btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: white !important;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cert-btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Ensure button text is always white */
+.cert-btn span {
+  color: white !important;
+}
+
+.certification-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.skill-tag {
+  background: rgba(138, 43, 226, 0.2);
+  color: #8A2BE2;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 500;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(138, 43, 226, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Ensure animations work */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5em;
+  }
+  
+  .university-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .university-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .university-name {
+    font-size: 2em;
+  }
+  
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-actions {
+    flex-direction: column;
+  }
+  
+  .cert-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .university-card,
+  .certification-card {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2em;
+  }
+  
+  .university-card {
+    padding: 25px 15px;
+  }
+  
+  .certification-card {
+    padding: 20px 15px;
+  }
+  
+  .university-name {
+    font-size: 1.6em;
+  }
+  
+  .certification-title {
+    font-size: 1.2em;
+  }
+  
+  .hero-badge {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+  
+  .cert-btn {
+    padding: 10px 20px;
+    font-size: 0.85em;
+  }
+}
+
+
+
+
+
+
+
+
+/* Fixed Button Styles - Add to About.css */
+.certification-card {
+  position: relative;
+  z-index: 1;
+}
+
+.certification-actions {
+  position: relative;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.cert-btn {
+  position: relative;
+  z-index: 101;
+  pointer-events: auto;
+  cursor: pointer !important;
+}
+
+/* Ensure no other elements are overlapping */
+.certification-card::before,
+.certification-card::after {
+  pointer-events: none;
+}
+
+.certification-badge {
+  z-index: 99; /* Lower than buttons */
+}
+
+.certification-image {
+  z-index: 1;
+}
+
+
+
+
+
+
+/* Technologies Section with Scroll Buttons */
+.technologies-section {
+  margin: 80px 0;
+  padding: 60px 0;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(74, 0, 224, 0.05) 100%);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.technologies-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8A2BE2, transparent);
+}
+
+/* Tech Scroll Container with Buttons */
+.tech-scroll-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tech-category {
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+}
+
+.tech-category:last-child {
+  margin-bottom: 0;
+}
+
+.tech-category-title {
+  color: #8A2BE2;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.tech-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #8A2BE2 0%, #4A00E0 100%);
+  border-radius: 2px;
+}
+
+/* Scroll Wrapper with Buttons */
+.tech-scroll-wrapper {
+  position: relative;
+  padding: 20px 60px; /* Increased padding for buttons */
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #8A2BE2 0%, #4A00E0 100%);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+.scroll-btn:hover {
+  background: linear-gradient(135deg, #9a3bf0 0%, #5a10ff 100%);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
+}
+
+.scroll-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.scroll-btn-left {
+  left: 0;
+}
+
+.scroll-btn-right {
+  right: 0;
+}
+
+/* Scroll Track */
+.tech-scroll-track {
+  display: flex;
+  gap: 25px;
+  padding: 20px 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.tech-scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tech-scroll-track:active {
+  cursor: grabbing;
+}
+
+/* Tech Item Styles (keep your existing styles) */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  padding: 25px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tech-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(138, 43, 226, 0.15);
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  padding: 15px;
+}
+
+.tech-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-icon img {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95em;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-name {
+  color: #8A2BE2;
+  font-weight: 700;
+}
+
+/* Hide buttons on mobile */
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
+  
+  .tech-scroll-wrapper {
+    padding: 20px 0; /* Remove padding on mobile */
+  }
+  
+  .tech-category-title {
+    font-size: 1.5em;
+  }
+  
+  .tech-item {
+    min-width: 100px;
+    padding: 20px 15px;
+  }
+  
+  .tech-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-scroll-track {
+    gap: 15px;
+  }
+  
+  .tech-item {
+    min-width: 90px;
+    padding: 15px 10px;
+  }
+  
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  
+  .tech-name {
+    font-size: 0.8em;
+  }
+}

@@ -7,67 +7,74 @@ import {
   DiNodejs,
   DiPython,
   DiGit,
-  DiJava,
   DiDart,
 } from "react-icons/di";
 import {
-  SiChatbot,
   SiFirebase,
   SiFlutter,
   SiOpencv,
   SiPytorch,
-  SiReact,
   SiScikitlearn,
   SiTensorflow,
-
+  SiPandas,
+  SiNumpy,
+  SiDocker,
+  SiKubernetes,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 
 function Techstack() {
+  const techCategories = [
+    {
+      title: "AI & Machine Learning",
+      items: [
+        { icon: <SiTensorflow />, name: "TensorFlow" },
+        { icon: <SiPytorch />, name: "PyTorch" },
+        { icon: <SiScikitlearn />, name: "Scikit-learn" },
+        { icon: <SiOpencv />, name: "OpenCV" },
+        { icon: <SiPandas />, name: "Pandas" },
+        { icon: <SiNumpy />, name: "NumPy" },
+      ]
+    },
+    {
+      title: "Programming Languages",
+      items: [
+        { icon: <DiPython />, name: "Python" },
+        { icon: <CgCPlusPlus />, name: "C++" },
+        { icon: <DiJavascript1 />, name: "JavaScript" },
+        { icon: <DiDart />, name: "Dart" },
+      ]
+    },
+    {
+      title: "Development & Tools",
+      items: [
+        { icon: <DiReact />, name: "React" },
+        { icon: <SiFlutter />, name: "Flutter" },
+        { icon: <DiGit />, name: "Git" },
+        { icon: <SiDocker />, name: "Docker" },
+        { icon: <SiKubernetes />, name: "Kubernetes" },
+        { icon: <SiFirebase />, name: "Firebase" },
+      ]
+    }
+  ];
+
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <DiDart />
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFlutter />
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTensorflow />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
-      </Col>  <Col xs={4} md={2} className="tech-icons">
-        <SiScikitlearn />
-      </Col>
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <SiOpencv />
-      </Col>
-
-    </Row>
+    <div className="techstack-container">
+      {techCategories.map((category, index) => (
+        <div key={index} className="tech-category">
+          <h4 className="category-title">{category.title}</h4>
+          <Row style={{ justifyContent: "center", paddingBottom: "30px" }}>
+            {category.items.map((tech, techIndex) => (
+              <Col xs={4} md={2} className="tech-icons" key={techIndex}>
+                <div className="tech-icon-wrapper">
+                  {tech.icon}
+                  <div className="tech-tooltip">{tech.name}</div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      ))}
+    </div>
   );
 }
 

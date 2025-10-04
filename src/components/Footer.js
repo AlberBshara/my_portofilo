@@ -14,7 +14,7 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Yassin Abdulmahdi</h3>
+          <h3>Designed and Developed by Alber Bshara</h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} SB</h3>
@@ -23,7 +23,7 @@ function Footer() {
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/Yassin522"
+                href="https://gitlab.com/AlberBshara/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -34,7 +34,7 @@ function Footer() {
          
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/yassin-abdulmahdi/"
+                href="https://www.linkedin.com/in/alber-bshara-544505224/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"

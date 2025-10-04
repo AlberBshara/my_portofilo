@@ -113,7 +113,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://medium.com/@Yassin52"
+                href="https://t.me/+r1NgK7dGzTEzYzdk"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -123,7 +123,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/Yassin522/Portfolio"
+                href="https://gitlab.com/AlberBshara/"
                 target="_blank"
                 className="fork-btn-inner"
               >

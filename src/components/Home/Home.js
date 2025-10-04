@@ -1,14 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/IMG_0538.JPG";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import BubbleBackground from "../BubbleBackground";
+import BrainNetwork from "../BrainNetwork"; // Import the new component
+import MeteorBackground from "../MeteorBackground"; // Changed from BubbleBackground
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
+        <MeteorBackground />
         <Particle />
         <Container className="home-content">
           <Row>
@@ -22,7 +25,7 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> Yassin Abdulmahdi</strong>
+                <strong className="main-name"> Alber Bshara </strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -30,13 +33,8 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
+            <Col md={5} style={{ paddingBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px' }}>
+              <BrainNetwork />
             </Col>
           </Row>
         </Container>

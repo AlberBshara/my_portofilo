@@ -2,54 +2,52 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import "./ExperienceCards.css";
 
 function ExperienceCards(props) {
   return (
-    <Card className="project-card-view" style={{ maxWidth: '40rem', height: '50rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '14rem' }}>
-        <Card.Img
-          variant="top"
-          src={props.imgPath}
-          alt="card-img"
-          style={{ width: '70%', height: 'auto', objectFit: 'contain' }}
-        />
-      </div>
-      <Card.Body>
-        <Card.Title style={{ fontSize: '0.9rem', whiteSpace: 'pre-line' , color: 'violet'}}>{props.title}</Card.Title>
-        <Card.Text style={{ fontSize: '0.8rem', textAlign: "start" }}>
-          {props.description.split('.').map((sentence, index) => (
-            <React.Fragment key={index}>
-              {sentence.trim()}
-              {sentence && '.'}
-              <br />
-            </React.Fragment>
-          ))}
-        </Card.Text>
-
-        <Card.Text >{props.date} </Card.Text>
-        {/* <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button> */}
-        {"\n"}
-        {"\n"}
-
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Website"}
-          </Button>
-        )}
-      </Card.Body>
-    </Card>
+    <div className="timeline-item">
+      <div className="timeline-marker"></div>
+      <Card className="experience-card-view">
+        <div className="company-logo-container">
+          <Card.Img
+            variant="top"
+            src={props.imgPath}
+            alt="card-img"
+            className="company-logo"
+          />
+        </div>
+        <Card.Body>
+          <div className="experience-header">
+            <Card.Title className="experience-title">{props.title}</Card.Title>
+            <div className="experience-date">{props.date}</div>
+          </div>
+          <Card.Text className="experience-description">
+            {props.description.split('•').map((point, index) => (
+              point.trim() && (
+                <div key={index} className="experience-point">
+                  <span className="bullet-point">•</span>
+                  {point.trim()}
+                </div>
+              )
+            ))}
+          </Card.Text>
+          
+          {props.demoLink && (
+            <Button
+              variant="primary"
+              href={props.demoLink}
+              target="_blank"
+              className="experience-button"
+            >
+              <CgWebsite /> &nbsp;
+              {"Website"}
+            </Button>
+          )}
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
+
 export default ExperienceCards;

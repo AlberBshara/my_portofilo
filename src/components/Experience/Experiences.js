@@ -2,192 +2,107 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ExperienceCard from "./ExperienceCards";
 import Particle from "../Particle";
-import drawing from "../../Assets/Projects/drawing.jpg";
-import streamlit from "../../Assets/Projects/download.jpeg";
-import blood from "../../Assets/Projects/blood.jpeg";
-import heart from "../../Assets/Projects/heart.jpeg";
-import linux from "../../Assets/Projects/linux.jpg";
-import schoolmate from "../../Assets/Projects/teacher mockup_014955.jpg";
-import radio from "../../Assets/Projects/Free Black Keyboard With Smartphone Mockup.jpg";
-import spark from "../../Assets/Experiences/1519895156650.jpeg";
-import in1minute from "../../Assets/Experiences/1535467604961.jpeg";
-import omdena from "../../Assets/Experiences/omdena.jpeg";
-import shai from "../../Assets/Experiences/1652345898144.jpeg";
-import shellcode from "../../Assets/Experiences/photo_2022-09-06_22-02-04.jpg";
-import ICPC from "../../Assets/Experiences/p4755.jpg";
-import rbcs from "../../Assets/Experiences/photo_2021-10-05_12-37-55.jpg";
-import seventh from "../../Assets/Experiences/seventhgeneration.png";
-import rachis from "../../Assets/Experiences/photo_2024-07-01_11-19-54.jpg";
 import tp from "../../Assets/Experiences/truepositive_tech_logo.jpeg";
+import prokoders from "../../Assets/prokoders.png";
+import credom_it_logo from "../../Assets/credom_it_logo.jpeg";
+import omdena from "../../Assets/Experiences/omdena.jpeg";
+
 
 
 function Experiences() {
+  const experiences = [
+    {
+      imgPath: tp,
+      title: "Data Scientist at TruePositive",
+      description: `  At TruePositive, I worked on high-impact AI and Data Science initiatives that transformed large-scale telecom data into actionable business intelligence.
+      Some of My contributions included:
+
+      • Built and deployed AI systems on Big telecom datas, using PySpark, duckdb, Presto, SQL, Pandas, like hybrid deep learning architectures (LSTM + Transformer) for subscriber activity prediction.  
+      • Developed anomaly detection pipelines with deep autoencoders in PyTorch to identify non-human usage patterns, improving etwork integrity.  
+      • Designed Human Detection scoring system leveraging IMEI-MSISDN patterns, device metadata, and subscriber mobility using Graph Neural Networks, VAEs.  
+      • (Talk with GraphDB) Engineered graph databases in Neo4j, integrating with LLMs and dashboards to allow natural language querying and analysis of telecom data.
+      • Researched and productioned AI-driven dynamic pricing systems for telecom bundles (minutes, megabytes, and SMS) using DL Model, and Math formula.
+      • Conducted Market Basket Analysis and Social Network Analysis to uncover customer behavior, top influencers, and hidden usage patterns.  
+      • Building CVM system with ETL pipline using airflow and AI Models for MTN Congo.
+      • implementing Advance and powerful data visualiztion & Analysis dashboards for a lot projects.
+
+      • These projects combined cutting-edge AI research with production-ready deployment, creating measurable business value and solidifying my role as a core contributor to TruePositive data-driven innovation strategy.
+      `,
+      date: "Jan,2025 – Present. UAE-Dubai",
+      demoLink: "https://www.linkedin.com/company/truepositive-tech/posts/?feedView=all"
+    },
+    {
+      imgPath: prokoders,
+      title: "AI Engineer at Prokoders",
+      description: ` At Prokoder, I worked on high-impact AI initiatives that transformed Ideas into actionable intelligence systems.
+      Some of My contributions included:
+
+      • Universal Website Chatbot with RAG, developed an end-to-end system using a local LLM (Llama 3.1) and ChromaDB to enable 
+      conversational AI for any website. Engineered a automated pipeline that, given a base URL, crawls, scrapes, and processes 
+      website content to build a Retrieval-Augmented Generation (RAG) database. Just enter Base URL then start chatting.
+
+      • AI-Powered, SEO-Optimized Website Generator, Contributed a core service to a larger platform that automatically generates fully 
+      optimized, single-page websites designed to rank at the top of search engine results. Developed an AI-driven engine that translates 
+      user inputs from structured forms into high-quality, search-engine-optimized content and structure, significantly simplifying the
+      web development process.
+
+      • Dynamic Pricing Engine Using Evolutionary Algorithms Led research and development of a dynamic pricing model 
+      utilizing evolutionary optimization algorithms, like Bee Colony Optimization.Innovated and rigorously tested up to
+      six hybrid optimizer algorithms to enhance pricing strategy efficiency and adaptability.
+
+      • AI-Powered Personalized Learning Assistant, Built an intelligent educational tool leveraging RAG and LLM to act as a personalized teacher for students.
+
+      • AI-Driven HR Recruitment Module Implemented a key component of an HR system designed to automate the initial screening 
+      of job applications. Developed an AI model to analyze and match candidate resumes with job descriptions, automatically
+       ranking applicants from most to least suitable to streamline the recruitment workflow.
+      
+      `,
+      date: "Aug,2024 – Mar,2025.  UAE-Sharjah",
+      demoLink: "https://prokoders.com/en"
+    },
+    {
+      imgPath: omdena,
+      title: "Intern AI Engineer at Omdena",
+      description: `Contributed as a volunteer in the Omdena Urban Farming Challange Omdena-Milan, actively involved in the development of AI system
+      to identify potentioal areas for Urban Agriculture in Milan, Italy. This project uses satellite imagery, climate data, and machine learning to identify
+      the most suitable locations and crops for urban agriculture in Milan, while also developing a smart pest management system to 
+      ensure sustainable and productive urban farming.`,
+      date: "May,2024 – Jul,2024. USA",
+      demoLink: "https://www.omdena.com/"
+    },
+       {
+      imgPath: credom_it_logo,
+      title: "Android Developer at Credom",
+      description: `Building native Android Applications using Java & XML and modren approach of kotlin & Jetpack-compose`,
+      date: "Nov,2021 – Jan,2023. Syria, Damascus",
+      demoLink: "https://www.linkedin.com/company/credom-it/posts/?feedView=all"
+    }
+    // here add more work Experinces 
+  ];
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Experience </strong>
+          My Professional <strong className="purple">Journey</strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few companies I've worked with recently.
+        <p style={{ color: "white", marginBottom: "50px" }}>
+          A timeline of my career progression and experiences
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-
-
-        <Col md={4} className="project-card">
+        
+        <div className="timeline-container">
+          {experiences.map((exp, index) => (
             <ExperienceCard
-              imgPath={tp}
-              isBlog={false}
-              title="Data Scientist at TruePositive"
-              description={`
-                • Performed Exploratory Data Analysis (EDA) on subscriber activity and revenue data to uncover churn
-                        drivers and usage behavior patterns.
-
-                • Delivered Drip, RFM, Growth, and GEO analyses for MTN Congo.
-               • Worked extensively with the SDP schema, integrating data from subscriber demographics, service
-                    engagement snapshots, bundle subscriptions, and revenue facts to create a customer view for
-                    advanced analytics.
-                • Built interactive dashboards with Apache Superset, giving client teams real-time visibility into KPIs
-and growth opportunities.
-
-                • Social Network Analysis pipeline on large-scale telecom data, reducing processing time by 90%
-through migration from PySpark to DuckDB.
-
-                • Collaborated on projects involving Large Language Models (LLMs).
-                   `
-                  }
-              date="Feb 2025 – present"
-
-              demoLink="https://www.linkedin.com/company/truepositive-tech/posts/?feedView=all"
+              key={index}
+              imgPath={exp.imgPath}
+              title={exp.title}
+              description={exp.description}
+              date={exp.date}
+              demoLink={exp.demoLink}
             />
-          </Col>
-
-
-        <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={rachis}
-              isBlog={false}
-              title="Research And Development Engineer at Rachis Systems Sdn. Bhd"
-              description={`•  Built a federated learning framework with adaptive differential privacy and client clustering,
-boosting model accuracy to 98.7% on MNIST data.
-                   • Enhanced an iris recognition system by improving accuracy and reliability.
-                • Applied meta-learning to optimize vehicle routing with time windows.
-                    • Collaborated with the team to solve real-world ML problems.
-                   `
-                  }
-              date="Oct 2024 – Mar 2025"
-
-              demoLink="https://rachis.co/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={seventh}
-              isBlog={false}
-              title="Data Engineer at Seventh Generation Tech"
-              description={`• Collaborated with the data team to develop and maintain web scraping pipelines using Selenium and Beautiful Soup.
-                   • Extracted and processed data from various websites to gather products information for IRANK, ensuring accurate and up-to-date data for users.
-                   • Conducted data cleaning and feature extraction to transform raw data into structured formats suitable for analysis.`}
-              date="May 2024- August 2024"
-              demoLink="https://www.seventhgenerationtech.com/"
-            />
-          </Col>
-
-
-
-          <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={omdena}
-              isBlog={false}
-              title="Junior Data Scientist at omdena"
-              description="• Contributed as a volunteer in the Omdena Ile-de-France Chapter, actively involved in the
-development of Conversational AI Chatbot for Alternative Transportation during strikes in
-France Responsibilities included designing and implementing machine learning solutions to
-enhance communication and accessibility during transportation disruptions.
-• Contributed as a volunteer in the Omdena Toronto Chapter, focusing on the Analyzing Brain
-Scan Images for the Early Detection and Diagnosis of Alzheimer's Disease project.
-
-             "
-
-              date="May 2023- Present"
-              //   ghLink="https://github.com/Yassin522/Interactive-Drawing-Education-System-for-Children"
-              demoLink="https://www.omdena.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={shai}
-              isBlog={false}
-              title="Data Science Intern at SHAI For AI"
-              description="• Completed a remote training program at Shai for AI specializing in the principles of data
-science.
-• Engaged in a comprehensive educational experience focused on core principles and practical
-applications of data science.
-• Acquired essential skills and knowledge in data analysis, machine learning, and statistical
-modeling.
-              
-              
-              "
-
-              date="Feb 2023 – Apr 2024"
-              //   ghLink="https://github.com/Yassin522/Interactive-Drawing-Education-System-for-Children"
-              demoLink="https://shaiforai.com/"
-            //   ghLink="https://github.com/Yassin522/My-webpage-using-streamlit"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={in1minute}
-              isBlog={false}
-              title="Research Intern at In1Minute"
-              description="• Engaged in collaborative research initiatives, actively participating in knowledge exchange
-sessions with a diverse cohort of fellow participants.
-
-• Leveraged the opportunity to glean insights from professionals representing various
-backgrounds, fostering an enriching exchange of ideas and perspectives.
-              "
-              date="Oct 2022- Nov 2022"
-
-            //   ghLink="https://github.com/Yassin522/Data-Sceince-Projects/tree/main/Heartbeat-Categorization"
-            //   demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          {/* <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={shellcode}
-              isBlog={false}
-              title="ShellCode Solution FLutter intern"
-              description="IT Services and IT Consulting. Work was done for a month on an application to manage a whole hotel and flutter were used to implement this project."
-              date="July 2022- Aug 2022"
-
-            //   ghLink="https://github.com/Yassin522/Data-Sceince-Projects/tree/main/Exploring-the-Evolution-of-Linux"
-            //   demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col> */}
-
-          <Col md={4} className="project-card">
-            <ExperienceCard
-              imgPath={ICPC}
-              isBlog={false}
-              title="ICPC - International Collegiate Programming Contest"
-              description="• Ranked 12th in the 2021 Al-Baath University Collegiate Programming Contest.
-              • Ranked 19th in the 2022 ICPC Damascus University Collegiate Programming Contest.
-              • 146th place among more than 400 participating teams in The 2021 ACPC Kickoff Online Individual Contest.
-              • 232th place among more than 400 participating teams in The 2022 ACPC Kickoff Online Individual Contest."
-
-              date="Jan 2021- 2023"
-            //   ghLink="https://github.com/Yassin522/Data-Sceince-Projects/tree/main/Give%20Life_%20Predict%20Blood%20Donations"
-            // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-
-        </Row>
+          ))}
+        </div>
       </Container>
     </Container>
   );
