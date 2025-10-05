@@ -106,7 +106,7 @@ function About() {
       title: "Software Design and Architecture Specialization. (4 Courses)",
       issuer: "University of Alberta at Coursera",
       date: "Completed 2021",
-      description: "This specialization provided a comprehensive understanding of deploying, managing, and maintaining machine learning models in production. Key concepts and tools mastered include:MLOps Fundamentals, Model Deployment, TensorFlow Extended, Data and Model Pipelines, Model Management and Versioning, and Performance Monitoring.",
+      description: "This specialization provided a comprehensive understanding of the principles and methods for designing robust, scalable, and maintainable software systems. Key concepts and skills mastered include: ware Design Principles, Architectural Styles & Patterns, Layered Architecture, Client-Server, Service-Oriented Architecture (SOA), Application Architecture, UML, and Object-Oriented Design.",
       skills: ["Coupling, Cohesion", "MVC","Layered Architecture", "Client-Server", "OOD", "UML", "Java"],
       badge: "✅ Professional",
       certificateUrl: "",
