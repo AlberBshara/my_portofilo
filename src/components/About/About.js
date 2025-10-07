@@ -442,6 +442,14 @@ function About() {
                     </div>
                     <span className="tech-name">Scikit-learn</span>
                   </div>
+
+                  <div className="tech-item">
+                    <div className="tech-icon">
+                      <img src={require("../../Assets/ollama.png")} alt="ollama" />
+                    </div>
+                    <span className="tech-name">Ollama</span>
+                  </div>
+
                   <div className="tech-item">
                     <div className="tech-icon">
                       <img src={require("../../Assets/pyspark.png")} alt="PySpark" />
